@@ -13,16 +13,109 @@ Built for **security research, phishing detection, and SOC analysis**.
 
 ---
 
-## 🚀 Features
+🔐 Core Features
+🌐 DNS Intelligence
 
-- 🌐 DNS Records: A, AAAA, MX, NS, TXT, CNAME
-- 🧠 Typosquatting detection against major brands
-- ⏳ Domain age analysis
-- 🚨 Risk scoring engine
-- 🖥️ Web UI
-- 🧪 REST API
-- ⚙ CLI mode
-- 🐳 Docker-ready
+A, AAAA (IPv6), MX, NS, TXT, CNAME record enumeration
+
+Detects missing or misconfigured DNS records
+
+Highlights email infrastructure risks
+
+🧾 WHOIS Analysis
+
+Registrar identification
+
+Domain creation date extraction
+
+Country attribution
+
+Detection of newly registered domains (common in phishing attacks)
+
+⚠️ Security Risk Analysis
+
+🚨 Newly registered domain detection
+
+🚨 Missing MX record warnings
+
+🚨 Domain reputation red flags
+
+🧠 Typosquatting Detection (Advanced)
+
+Detects domains attempting to impersonate well-known brands such as:
+
+Google
+
+Facebook
+
+Instagram
+
+PayPal
+
+Microsoft
+
+Example:
+
+paypa1-login[.]com → FLAGGED
+
+
+This is a real phishing detection technique used in production security tools.
+
+🖥️ Interfaces
+🧪 CLI Tool
+
+Fast terminal-based domain scanning
+
+Ideal for automation and scripting
+
+Clean, structured output
+
+🌍 Web Application (Flask)
+
+User-friendly web dashboard
+
+Displays DNS records, WHOIS data, and alerts
+
+Designed for analyst-style investigation
+
+🛠️ Tech Stack
+Technology                    Purpose
+
+-Python	                      -Core logic
+-dnspython                   	-DNS resolution
+-python-whois	                -WHOIS intelligence
+-Flask	                        -Web interface
+-HTML / Jinja2	                -Frontend templating
+-Git                         	-Version control
+🚀 Why This Project Matters 
+
+This is not a basic DNS lookup script.
+
+This project demonstrates:
+
+✅ Practical cybersecurity knowledge
+
+✅ Understanding of attacker & defender perspectives
+
+✅ Secure Python development
+
+✅ Real-world domain risk analysis logic
+
+✅ Ability to turn raw data into actionable security insights
+
+It reflects the same workflow used by security analysts when investigating phishing domains, suspicious URLs, or newly registered infrastructure.
+
+📂 Project Structure
+DNS-Lookup-and-Domain-Intelligence-Tool/
+│
+├── web_dns_lookup.py      # Flask web app
+├── cli_dns_lookup.py      # CLI scanner
+├── templates/
+│   └── index.html
+├── requirements.txt
+├── README.md
+└── .gitignore
+
 
 ---
 
@@ -65,4 +158,5 @@ Threat feed correlation
 👨‍💻 Author
 Joe Munene
 Built by a cybersecurity learner focused on ethical hacking & defense.
+
 
