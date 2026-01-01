@@ -58,7 +58,6 @@ Example:
 
 paypa1-login[.]com → FLAGGED
 
-
 This is a real phishing detection technique used in production security tools.
 
 🖥️ Interfaces
@@ -81,13 +80,13 @@ Designed for analyst-style investigation
 🛠️ Tech Stack
 Technology                    Purpose
 
--Python	                      -Core logic
--dnspython                   	-DNS resolution
--python-whois	                -WHOIS intelligence
--Flask	                        -Web interface
--HTML / Jinja2	                -Frontend templating
--Git                         	-Version control
-🚀 Why This Project Matters 
+-Python                       -Core logic
+-dnspython                    -DNS resolution
+-python-whois                 -WHOIS intelligence
+-Flask                         -Web interface
+-HTML / Jinja2                 -Frontend templating
+-Git                          -Version control
+🚀 Why This Project Matters
 
 This is not a basic DNS lookup script.
 
@@ -115,7 +114,6 @@ DNS-Lookup-and-Domain-Intelligence-Tool/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
 
 ---
 
@@ -159,4 +157,9 @@ Threat feed correlation
 Joe Munene
 Built by a cybersecurity learner focused on ethical hacking & defense.
 
-
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-lightgrey)
+![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
+![Status](https://img.shields.io/badge/Status-Active_Development-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub Actions](https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool/actions/workflows/python-tests.yml/badge.svg)
