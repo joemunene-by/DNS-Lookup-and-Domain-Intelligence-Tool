@@ -29,7 +29,7 @@ Built for **security research, phishing detection, and SOC analysis**.
 ## 📦 Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool
 cd project
 pip install -r requirements.txt
 ▶ Run Web App
@@ -65,3 +65,4 @@ Threat feed correlation
 👨‍💻 Author
 Joe Munene
 Built by a cybersecurity learner focused on ethical hacking & defense.
+
