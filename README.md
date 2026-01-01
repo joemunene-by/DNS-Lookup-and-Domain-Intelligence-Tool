@@ -1,165 +1,82 @@
-# 🔐 Web DNS Security Scanner
+# DNS Lookup and Domain Intelligence Tool
 
-A hybrid **Web + CLI cybersecurity reconnaissance tool** that performs:
-
-- DNS record inspection
-- WHOIS intelligence
-- Typosquatting detection
-- IP reputation heuristics
-- Risk scoring (LOW / MEDIUM / HIGH)
-- JSON API access
-
-Built for **security research, phishing detection, and SOC analysis**.
+[![GitHub Actions](https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool/actions/workflows/python-tests.yml/badge.svg)](https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool/actions/workflows/python-tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
 ---
 
-🔐 Core Features
-🌐 DNS Intelligence
+## Project Overview
 
-A, AAAA (IPv6), MX, NS, TXT, CNAME record enumeration
+This **DNS Lookup and Domain Intelligence Tool** is a comprehensive cybersecurity utility designed to assist security professionals, researchers, and enthusiasts in gathering critical domain data and detecting potential threats.
 
-Detects missing or misconfigured DNS records
+With this tool, you can:
 
-Highlights email infrastructure risks
+- Perform detailed DNS lookups including A, AAAA, MX, NS, TXT, and CNAME records.
+- Retrieve WHOIS information for domains including registrar, creation date, and country.
+- Detect security issues such as missing MX records (potential email misuse risk).
+- Identify possible typosquatting attacks by comparing domains to popular brand names.
+- Analyze domain age to flag newly registered domains that may be suspicious.
 
-🧾 WHOIS Analysis
-
-Registrar identification
-
-Domain creation date extraction
-
-Country attribution
-
-Detection of newly registered domains (common in phishing attacks)
-
-⚠️ Security Risk Analysis
-
-🚨 Newly registered domain detection
-
-🚨 Missing MX record warnings
-
-🚨 Domain reputation red flags
-
-🧠 Typosquatting Detection (Advanced)
-
-Detects domains attempting to impersonate well-known brands such as:
-
-Google
-
-Facebook
-
-Instagram
-
-PayPal
-
-Microsoft
-
-Example:
-
-paypa1-login[.]com → FLAGGED
-
-This is a real phishing detection technique used in production security tools.
-
-🖥️ Interfaces
-🧪 CLI Tool
-
-Fast terminal-based domain scanning
-
-Ideal for automation and scripting
-
-Clean, structured output
-
-🌍 Web Application (Flask)
-
-User-friendly web dashboard
-
-Displays DNS records, WHOIS data, and alerts
-
-Designed for analyst-style investigation
-
-🛠️ Tech Stack
-Technology                    Purpose
-
--Python                       -Core logic
--dnspython                    -DNS resolution
--python-whois                 -WHOIS intelligence
--Flask                         -Web interface
--HTML / Jinja2                 -Frontend templating
--Git                          -Version control
-🚀 Why This Project Matters
-
-This is not a basic DNS lookup script.
-
-This project demonstrates:
-
-✅ Practical cybersecurity knowledge
-
-✅ Understanding of attacker & defender perspectives
-
-✅ Secure Python development
-
-✅ Real-world domain risk analysis logic
-
-✅ Ability to turn raw data into actionable security insights
-
-It reflects the same workflow used by security analysts when investigating phishing domains, suspicious URLs, or newly registered infrastructure.
-
-📂 Project Structure
-DNS-Lookup-and-Domain-Intelligence-Tool/
-│
-├── web_dns_lookup.py      # Flask web app
-├── cli_dns_lookup.py      # CLI scanner
-├── templates/
-│   └── index.html
-├── requirements.txt
-├── README.md
-└── .gitignore
+The tool is built as a **user-friendly web application** powered by Python and Flask, with a simple interface for quick domain investigations.
 
 ---
 
-## 📦 Installation
+## Key Features
+
+- **Multi-record DNS queries** for in-depth domain analysis.
+- **WHOIS integration** to provide domain ownership and registration details.
+- **Security alerts** for common red flags including typosquatting and domain age.
+- **Easy-to-use web UI** for fast lookups without command-line complexity.
+- **CI pipeline** with GitHub Actions ensures code quality and automated testing.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.10 or higher
+- pip package manager
+
+### Installation
 
 ```bash
-git clone https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool
-cd project
+git clone https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool.git
+cd DNS-Lookup-and-Domain-Intelligence-Tool
 pip install -r requirements.txt
-▶ Run Web App
+Running the Web Application
 bash
+Copy code
 python web_dns_lookup.py
-Visit: http://localhost:5000
+Open your browser and navigate to http://127.0.0.1:5000 to use the tool.
 
-🧪 Run CLI Mode
-bash
-python cli_scan.py example.com
-🔌 API Usage
-http
-GET /api/scan?domain=example.com
-Returns full JSON intelligence.
+Project Structure
+web_dns_lookup.py — Main Flask app serving the web UI and backend logic.
 
-🐳 Docker Run
-bash
-docker build -t dns-scanner .
-docker run -p 5000:5000 dns-scanner
-⚠ Legal Notice
-This tool is for educational and defensive security research only.
-Do NOT scan domains you do not own or have permission to analyze.
+templates/index.html — HTML template for the web interface.
 
-🧠 Future Improvements
-Live AbuseIPDB integration
+.github/workflows/python-tests.yml — GitHub Actions CI pipeline config.
 
-SSL certificate analysis
+README.md — Project documentation.
 
-ASN & hosting provider detection
+requirements.txt — Python dependencies.
 
-Threat feed correlation
+Future Enhancements
+Expand typosquatting detection with fuzzy matching algorithms.
 
-👨‍💻 Author
-Joe Munene
-Built by a cybersecurity learner focused on ethical hacking & defense.
+Add more WHOIS fields and DNS record types.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Flask](https://img.shields.io/badge/Flask-Web_App-lightgrey)
-![Cybersecurity](https://img.shields.io/badge/Focus-Cybersecurity-red)
-![Status](https://img.shields.io/badge/Status-Active_Development-success)
-![License](https://img.shields.io/badge/License-MIT-green)
-![GitHub Actions](https://github.com/joemunene-by/DNS-Lookup-and-Domain-Intelligence-Tool/actions/workflows/python-tests.yml/badge.svg)
+Integrate API support for automated domain intelligence workflows.
+
+Deploy as a public web service with authentication.
+
+License
+This project is licensed under the MIT License.
+
+Contact
+Created by Joe Munene — passionate about cybersecurity and building practical tools.
+
+Feel free to open issues or submit pull requests!
+
+Thank you for checking out this project!
