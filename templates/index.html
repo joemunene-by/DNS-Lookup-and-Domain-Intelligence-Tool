@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DNS Lookup Tool</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+        }
+
+        .box {
+            background: #020617;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔐 DNS Lookup & Domain Intelligence</h1>
+
+    <form method="POST">
+        <input type="text" name="domain" placeholder="example.com" required>
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if dns_data %}
+    <div class="box">
+        <h2>DNS Records</h2>
+        {% for record, values in dns_data.items() %}
+        <b>{{ record }}</b>
+        <ul>
+            {% for v in values %}
+            <li>{{ v }}</li>
+            {% else %}
+            <li>None</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if whois_data %}
+    <div class="box">
+        <h2>WHOIS Info</h2>
+        {% for k, v in whois_data.items() %}
+        <p><b>{{ k }}:</b> {{ v }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if alerts %}
+    <div class="box">
+        <h2>Security Alerts</h2>
+        {% for alert in alerts %}
+        <p>⚠️ {{ alert }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</body>
+
+</html>
